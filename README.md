@@ -20,6 +20,8 @@ Endpoint = engage.cloudflareclient.com:2408
 
 Отредактируйте файл /etc/config/network и добавьте следующие строки. Убедитесь, что личные_ключи {PRIVATEKEY} {PUBLICKEY}. совпадают с имеющимся у вас файлом wgcf-profile.conf :
 
+затем выполните 
+> 
 opkg update
 opkg install luci-proto-wireguard
 # network backup
@@ -65,3 +67,4 @@ uci commit
 # restart
 /etc/init.d/network restart
 
+> 
