@@ -1,3 +1,24 @@
+Как использовать Cloudflare WARP на OpenWrt 
+
+На свой компьютер загрузите соответствующий двоичный выпуск wgcf с Github https://github.com/ViRb3/wgcf .
+
+Вы получите файл wgcf-profile.conf , который вам понадобится для настройки Wireguard на вашем маршрутизаторе OpenWrt. Файл должен выглядеть так:
+[Интерфейс]
+PrivateKey = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Адрес = 100.16.0.2/32
+Адрес = fddd:5ca1:ab1e:8daf:209d:9414:d1e0:5d2c/128
+DNS = 1.1.1.1
+MTU = 1280
+[Peer]
+PublicKey = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+= 0,0. 0.0/0
+Разрешенные IP-адреса = ::/0
+Конечная точка = Engage.cloudflareclient.com:2408
+
+Теперь на вашем маршрутизаторе OpenWrt выполните: opkg update && opkg install Wireguard Wireguard-Tools luci-proto-wireguard
+
+Отредактируйте файл /etc/config/network и добавьте следующие строки. Убедитесь, что личные_ключи {PRIVATEKEY} {PUBLICKEY}. совпадают с имеющимся у вас файлом wgcf-profile.conf :
+
 opkg update
 opkg install luci-proto-wireguard
 # network backup
