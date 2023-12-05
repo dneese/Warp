@@ -2,6 +2,8 @@
 
 На свой компьютер загрузите соответствующий двоичный выпуск wgcf с Github https://github.com/ViRb3/wgcf .
 
+или apk на андроид https://github.com/dneese/Warp/raw/main/1.1.1.1%20%206.14.apk
+
 Вы получите файл wgcf-profile.conf , который вам понадобится для настройки Wireguard на вашем маршрутизаторе OpenWrt. Файл должен выглядеть так:
 > [Interface]\
 PrivateKey = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\
@@ -18,7 +20,7 @@ Endpoint = engage.cloudflareclient.com:2408
 
 Теперь на вашем маршрутизаторе OpenWrt выполните: **opkg update && opkg install wireguard wireguard-tools luci-proto-wireguard**
 
-Отредактируйте файл /etc/config/network и добавьте следующие строки. Убедитесь, что личные_ключи {PRIVATEKEY} {PUBLICKEY}. совпадают с имеющимся у вас файлом wgcf-profile.conf :
+ Убедитесь, что личные_ключи {PRIVATEKEY} {PUBLICKEY}. совпадают с имеющимся у вас файлом wgcf-profile.conf :
 
 затем выполните 
 ```bash
