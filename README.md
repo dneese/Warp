@@ -5,6 +5,13 @@
 или apk на андроид https://github.com/dneese/Warp/raw/main/1.1.1.1%20%206.14.apk
 в apk при подключении конфиг скопируется в буфер обмена
 
+access_token = "aad88b-5411-4674-ab03-dc67ee098aac"
+device_id = "d78ffa4-f8f-42ad-a8f2-b42af1ab74a5"
+license_key = "vk950-2fp863Ld-U4m10l5g"
+private_key = "Gh968fdWD8IzkR1mhZucOBr9VNj+1zM1KBaf0gMM="
+а public key посмотрите в самом приложении 
+
+
 Вы получите файл wgcf-profile.conf , который вам понадобится для настройки Wireguard на вашем маршрутизаторе OpenWrt. Файл должен выглядеть так:
 > [Interface]\
 PrivateKey = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\
