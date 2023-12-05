@@ -3,6 +3,7 @@
 На свой компьютер загрузите соответствующий двоичный выпуск wgcf с Github https://github.com/ViRb3/wgcf .
 
 или apk на андроид https://github.com/dneese/Warp/raw/main/1.1.1.1%20%206.14.apk
+в apk при подключении конфиг скопируется в буфер обмена
 
 Вы получите файл wgcf-profile.conf , который вам понадобится для настройки Wireguard на вашем маршрутизаторе OpenWrt. Файл должен выглядеть так:
 > [Interface]\
