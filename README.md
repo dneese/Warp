@@ -26,11 +26,17 @@ AllowedIPs = ::/0\
 Endpoint = engage.cloudflareclient.com:2408
 >
 
-Теперь на вашем маршрутизаторе OpenWrt выполните: **opkg update && opkg install wireguard wireguard-tools luci-proto-wireguard**
+Теперь на вашем маршрутизаторе OpenWrt выполните: **opkg update && opkg install wireguard wireguard-tools luci-app-wireguard luci-proto-wireguard**
 
- Убедитесь, что личные_ключи {PRIVATEKEY} {PUBLICKEY}. совпадают с имеющимся у вас файлом wgcf-profile.conf :
+Вот пакеты, которые должны быть установлены:
+wireguard-tools
+kmod-wireguard
+luci-app-wireguard
+luci-i18n-wireguard-en
+luci-proto-wireguard
 
-затем выполните 
+
+затем выполните по ssh
 ```bash
 opkg update
 opkg install luci-proto-wireguard
@@ -77,3 +83,7 @@ uci commit
 # restart
 /etc/init.d/network restart
 ```
+
+теперь в настройках роутера идёте
+в wireguard 
+Убедитесь, что личные_ключи {PRIVATEKEY} {PUBLICKEY}. совпадают с имеющимся у вас файлом wgcf-profile.conf 
